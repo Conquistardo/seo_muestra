@@ -1,0 +1,468 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+export const prerender = true;
+
+const title = "Metal Buildings in Wisconsin | Custom Steel Structures";
+const description =
+  "Premium metal buildings in Wisconsin engineered for snow loads and durability. Custom steel garages, barns, and commercial structures.";
+const canonical = "https://yourdomain.com/metal-buildings-wisconsin/";
+
+const faqItems = [
+  {
+    question: "How long does it take to install a metal building in Wisconsin?",
+    answer:
+      "Most Wisconsin metal garages and workshops are installed in a few days once permits, site prep, and engineered drawings are complete. Large commercial steel buildings may require additional phases for concrete, utilities, and interior finish-outs."
+  },
+  {
+    question: "Are your steel buildings engineered for Wisconsin snow loads?",
+    answer:
+      "Yes. Every structure is configured for local requirements, including ground snow loads, wind exposure, and use type. We provide engineered plans so your project can move through the local permit process with confidence."
+  },
+  {
+    question: "Can I customize doors, insulation, and interior layout?",
+    answer:
+      "Absolutely. You can choose roll-up doors, framed openings, skylights, ventilation, insulation packages, and partition-ready layouts. We help you match your design to storage, business, or agricultural operations."
+  }
+];
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Wisconsin Steel Structures",
+    url: canonical,
+    areaServed: "Wisconsin",
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "WI",
+      addressCountry: "US"
+    },
+    description
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} structuredData={structuredData}>
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Wisconsin Steel Building Specialists</p>
+          <h1>Metal Buildings in Wisconsin</h1>
+          <p>
+            Our team designs and installs <strong>metal buildings Wisconsin</strong> property owners can rely on year after year. From
+            compact backyard garages to large agricultural and commercial projects, every structure is engineered for local
+            weather, practical workflows, and long-term durability. If you are comparing <strong>steel buildings Wisconsin</strong> companies,
+            we focus on transparent pricing, custom planning, and direct support from quote to completion.
+          </p>
+          <p>
+            Whether you need additional storage, a secure workspace, or a new facility for your business, we deliver code-ready
+            options with professional guidance. Explore our full offerings on <a href="/services/">our services page</a>, learn more
+            about our company on <a href="/about/">about</a>, or request pricing through <a href="/contact/">contact</a>.
+          </p>
+          <a class="button" href="/contact/" aria-label="Request a free quote for a Wisconsin metal building">
+            Request a Free Quote
+          </a>
+        </div>
+        <figure>
+          <img
+            src="/images/metal-buildings-wisconsin.svg"
+            alt="Illustration of a custom steel building built for Wisconsin weather conditions"
+            width="1200"
+            height="800"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Why Choose Our Steel Buildings</h2>
+        <p>
+          Choosing the right builder is as important as choosing the right structure. We do not sell one-size-fits-all kits and
+          disappear after checkout. We build tailored solutions for homeowners, farms, and business operators who need performance,
+          not guesswork. Each recommendation is based on your intended use, site conditions, and budget priorities.
+        </p>
+        <p>
+          Customers across the state trust our <strong>Wisconsin metal garages</strong> and commercial structures because we combine
+          engineering standards with practical design decisions. That means proper eave heights for vehicle clearance, smart entry
+          placement for workflow, and roof systems designed to handle seasonal snow demands.
+        </p>
+        <ul>
+          <li>Engineered plans built for Wisconsin code requirements and regional weather loads.</li>
+          <li>Custom dimensions, door options, overhangs, and panel colors to match your property.</li>
+          <li>Efficient project timelines with clear milestones and responsive communication.</li>
+          <li>Straightforward estimates with no confusing hidden fees.</li>
+          <li>Options for residential, agricultural, municipal, and light-industrial use.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Types of Metal Buildings</h2>
+        <p>
+          We offer a wide range of steel structure solutions across Wisconsin. Each category below can be tailored by width, depth,
+          bay spacing, roof pitch, insulation strategy, and access points.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Metal Garages and Workshops</h3>
+            <p>
+              Secure your vehicles, equipment, and tools with layouts built for daily convenience. Popular options include single- and
+              multi-bay garages, high-clearance shops for lifted trucks, and enclosed work areas with windows and ventilation.
+              These are ideal for homeowners and contractors who want durable utility space without the maintenance burden of wood framing.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Agricultural Buildings</h3>
+            <p>
+              Farm operations need structures that support equipment storage, feed protection, and seasonal flexibility. We design
+              barns and ag storage buildings with clear-span interiors, reliable airflow, and access that accommodates tractors,
+              trailers, and utility vehicles. Steel performs especially well in environments where moisture and use intensity are high.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Commercial and Industrial Facilities</h3>
+            <p>
+              Our <strong>commercial steel buildings WI</strong> businesses choose include retail-ready shells, service shops, distribution
+              units, and multi-purpose facilities. We coordinate framing specs around occupancy goals, storefront openings, mezzanine
+              potential, and future expansion plans, helping you scale from startup needs to long-term business growth.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Storage and Utility Structures</h3>
+            <p>
+              Not every project needs a large footprint. We also provide compact structures for municipal storage, seasonal equipment,
+              and utility support. These small-to-mid-size buildings are cost-efficient, easy to configure, and ideal for property owners
+              who need clean, weather-resistant storage without overbuilding.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Built for Wisconsin Snow Loads</h2>
+        <p>
+          Wisconsin winters demand structural systems that are ready for real accumulation, freeze-thaw cycles, and shifting seasonal
+          conditions. We design and source framing components to align with local loading criteria, ensuring your building is not just
+          visually impressive but technically prepared.
+        </p>
+        <p>
+          Roof geometry, purlin spacing, truss design, and anchoring methods all influence how a structure handles stress. Our team
+          works through these variables early so you can avoid costly redesigns or permit delays later. If your site has unique exposure,
+          elevation, or use-case considerations, we adjust specifications to protect your investment.
+        </p>
+        <p>
+          Many buyers comparing <strong>metal buildings Wisconsin</strong> vendors focus only on price per square foot. In practice,
+          performance value comes from engineering quality, weather resilience, and functional layout choices. A cheaper quote can become
+          expensive quickly when it misses local structural requirements.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Service Areas</h2>
+        <p>
+          We provide planning and installation support throughout Wisconsin. Projects vary by county and municipality, so we help you
+          review site logistics, access needs, and permit expectations before fabrication begins.
+        </p>
+        <ul class="columns">
+          <li>Milwaukee Metro</li>
+          <li>Madison and Dane County</li>
+          <li>Green Bay and Fox Valley</li>
+          <li>Racine and Kenosha</li>
+          <li>Eau Claire and La Crosse</li>
+          <li>Wausau and Central Wisconsin</li>
+          <li>Oshkosh and Fond du Lac</li>
+          <li>Rural and agricultural service areas statewide</li>
+        </ul>
+        <p>
+          Not sure if we cover your location? Visit our <a href="/contact/">contact page</a> and share your project zip code. We will
+          confirm service availability and provide a realistic timeline for design and installation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Our Process</h2>
+        <p>
+          A smooth project starts with a clear process. We keep every step simple, documented, and focused on your goals so you always
+          know what comes next.
+        </p>
+        <ol>
+          <li>
+            <strong>Discovery and quote:</strong> We gather dimensions, use-case details, and site requirements to provide a targeted
+            recommendation and transparent estimate.
+          </li>
+          <li>
+            <strong>Engineering and planning:</strong> Your project is configured with load criteria and code considerations relevant to
+            Wisconsin so permit submission can move efficiently.
+          </li>
+          <li>
+            <strong>Site preparation:</strong> We coordinate foundation and access requirements to ensure installation conditions are
+            correct before materials arrive.
+          </li>
+          <li>
+            <strong>Installation:</strong> Our team assembles the structure with attention to alignment, weather sealing, and long-term
+            performance details.
+          </li>
+          <li>
+            <strong>Final walkthrough:</strong> We review completed work, answer operational questions, and confirm the building matches
+            your approved plan.
+          </li>
+        </ol>
+        <p>
+          This workflow helps reduce delays and surprises, especially for first-time buyers exploring steel construction. It is also a
+          strong fit for repeat developers who need dependable execution across multiple sites.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Cost of Metal Buildings in Wisconsin</h2>
+        <p>
+          Pricing depends on more than square footage. Building width, height, door packages, insulation, regional load specs, and site
+          readiness all influence final cost. Our estimates are structured to help you compare options clearly and avoid costly omissions.
+        </p>
+        <p>
+          Residential garages often prioritize secure storage and vehicle access, while commercial buyers focus on occupancy planning,
+          utility integration, and operational flow. Agricultural projects may emphasize equipment clearance, open-span interiors, and
+          durable panel systems. We align your quote with these use-case priorities to maximize long-term value.
+        </p>
+        <p>
+          If you are budgeting a new project, the fastest way to get accurate numbers is sharing your target dimensions, location, and
+          intended use. We can then provide a practical range and upgrade options so you can make confident decisions without guesswork.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          {faqItems.map((item) => (
+            <article class="faq-item">
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container">
+        <h2>Request a Free Quote</h2>
+        <p>
+          Ready to build a high-performance steel structure in Wisconsin? Share your project details and we will deliver a custom quote
+          tailored to your timeline, budget, and site requirements.
+        </p>
+        <a class="button" href="/contact/" aria-label="Go to contact page and request a free quote">
+          Request a Free Quote
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <p><strong>Wisconsin Steel Structures</strong></p>
+      <p>Service Area: Wisconsin</p>
+      <p><a href="/contact/">Contact Us</a></p>
+      <p>&copy; {new Date().getFullYear()} Wisconsin Steel Structures. All rights reserved.</p>
+    </div>
+  </footer>
+</BaseLayout>
+
+<style>
+  .container {
+    width: min(1080px, 92%);
+    margin: 0 auto;
+  }
+
+  .hero {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: #166534;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.78rem;
+  }
+
+  h1 {
+    margin: 0.45rem 0 1rem;
+    font-size: clamp(1.95rem, 5vw, 2.8rem);
+    line-height: 1.2;
+  }
+
+  p {
+    margin: 0 0 1rem;
+    color: #1e293b;
+  }
+
+  .button {
+    display: inline-block;
+    background: #166534;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+  }
+
+  .button:hover,
+  .button:focus-visible {
+    background: #14532d;
+  }
+
+  figure {
+    margin: 0;
+    background: #fff;
+    border: 1px solid #dbe2ea;
+    border-radius: 14px;
+    padding: 0.85rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .section-alt {
+    background: #f1f5f9;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  h2 {
+    font-size: clamp(1.45rem, 3.5vw, 2rem);
+    margin: 0 0 1rem;
+    line-height: 1.25;
+  }
+
+  h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.15rem;
+    line-height: 1.35;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.2rem;
+    margin: 0 0 1rem;
+  }
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+  }
+
+  .columns {
+    columns: 1;
+    column-gap: 1.5rem;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    padding: 1rem;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  .cta {
+    text-align: center;
+    background: linear-gradient(135deg, #0f766e 0%, #0f766e 10%, #14532d 100%);
+    color: #fff;
+  }
+
+  .cta p {
+    color: #e2e8f0;
+    margin: 0 auto 1rem;
+    max-width: 760px;
+  }
+
+  .cta .button {
+    background: #f8fafc;
+    color: #14532d;
+  }
+
+  footer {
+    padding: 1.6rem 0 2rem;
+    border-top: 1px solid #dbe2ea;
+    background: #fff;
+  }
+
+  .footer-grid {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .footer-grid p {
+    margin: 0;
+    color: #334155;
+  }
+
+  @media (min-width: 780px) {
+    .hero-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+    }
+
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .columns {
+      columns: 2;
+    }
+  }
+</style>

@@ -1,0 +1,203 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+export const prerender = true;
+
+const siteUrl = "https://yourdomain.com";
+const title = "Contact Us | Wisconsin Steel Structures";
+const description =
+  "Contact Wisconsin Steel Structures to request a quote for metal garages, barns, and commercial steel buildings in Wisconsin.";
+const canonical = `${siteUrl}/contact/`;
+
+const destinationEmail = import.meta.env.PUBLIC_CONTACT_EMAIL ?? "hello@yourdomain.com";
+const siteOrigin = (import.meta.env.PUBLIC_SITE_URL ?? "http://localhost:4321").replace(/\/$/, "");
+const formAction = `https://formsubmit.co/${encodeURIComponent(destinationEmail)}`;
+const successUrl = `${siteOrigin}/contact/thanks/`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <main id="main-content">
+    <section class="contact-section">
+      <div class="container">
+        <a class="back-link" href="/metal-buildings-wisconsin/" aria-label="Back to Metal Buildings in Wisconsin page">
+          Back to Metal Buildings Wisconsin
+        </a>
+        <h1>Contact Us</h1>
+        <p>
+          Tell us about your project and we will follow up with pricing and next steps. We support custom
+          <strong> metal buildings in Wisconsin</strong> for residential, agricultural, and commercial use.
+        </p>
+        <form action={formAction} method="POST" class="contact-form" aria-label="Quote request form">
+          <input type="hidden" name="_subject" value="New Wisconsin steel building lead" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value={successUrl} />
+
+          <div class="field">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" />
+          </div>
+
+          <div class="field">
+            <label for="city">City or ZIP in Wisconsin</label>
+            <input id="city" name="city" type="text" autocomplete="address-level2" />
+          </div>
+
+          <div class="field">
+            <label for="buildingType">Building Type</label>
+            <select id="buildingType" name="buildingType" required>
+              <option value="">Select one option</option>
+              <option value="metal-garage">Metal Garage</option>
+              <option value="farm-barn">Farm Barn</option>
+              <option value="workshop">Workshop</option>
+              <option value="commercial-building">Commercial Building</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="dimensions">Approximate Dimensions</label>
+            <input id="dimensions" name="dimensions" type="text" placeholder="Example: 40x60x14" />
+          </div>
+
+          <div class="field field-full">
+            <label for="message">Project Details</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Tell us your timeline, use case, and any required features."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">Send Request</button>
+        </form>
+        <p class="note">
+          You can also learn more <a href="/about/">about our team</a> or review our <a href="/services/">services</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .container {
+    width: min(860px, 92%);
+    margin: 0 auto;
+  }
+
+  .contact-section {
+    padding: 3rem 0 4rem;
+  }
+
+  h1 {
+    margin: 0 0 0.8rem;
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  p {
+    margin: 0 0 1rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .back-link:hover,
+  .back-link:focus-visible {
+    text-decoration: underline;
+  }
+
+  .contact-form {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.95rem;
+    padding: 1.15rem;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  }
+
+  .field {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  label {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 0.66rem 0.75rem;
+    font: inherit;
+    color: #0f172a;
+    background: #fff;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #166534;
+    outline: 2px solid #bbf7d0;
+    outline-offset: 1px;
+  }
+
+  button {
+    width: fit-content;
+    border: 0;
+    border-radius: 8px;
+    padding: 0.75rem 1.2rem;
+    font: inherit;
+    font-weight: 700;
+    color: #fff;
+    background: #166534;
+    cursor: pointer;
+  }
+
+  button:hover,
+  button:focus-visible {
+    background: #14532d;
+  }
+
+  .note {
+    margin-top: 1rem;
+    color: #334155;
+  }
+
+  @media (min-width: 720px) {
+    .contact-form {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .field-full {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

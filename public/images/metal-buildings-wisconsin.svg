@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Metal building in Wisconsin</title>
+  <desc id="desc">Illustration of a steel building with snow-ready roof profile and garage openings.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)" />
+  <rect y="560" width="1200" height="240" fill="url(#ground)" />
+  <rect x="220" y="265" width="760" height="325" rx="12" fill="#f1f5f9" stroke="#334155" stroke-width="8" />
+  <polygon points="180,290 600,150 1020,290" fill="#94a3b8" stroke="#334155" stroke-width="8" />
+  <line x1="290" y1="200" x2="910" y2="200" stroke="#e2e8f0" stroke-width="8" />
+  <rect x="300" y="355" width="180" height="235" rx="6" fill="#1e293b" />
+  <rect x="510" y="355" width="180" height="235" rx="6" fill="#1e293b" />
+  <rect x="720" y="355" width="180" height="235" rx="6" fill="#1e293b" />
+  <rect x="344" y="220" width="160" height="26" rx="4" fill="#e2e8f0" />
+  <rect x="526" y="220" width="160" height="26" rx="4" fill="#e2e8f0" />
+  <rect x="708" y="220" width="160" height="26" rx="4" fill="#e2e8f0" />
+  <circle cx="170" cy="160" r="55" fill="#f8fafc" stroke="#cbd5e1" stroke-width="6" />
+  <circle cx="900" cy="110" r="8" fill="#ffffff" />
+  <circle cx="940" cy="145" r="6" fill="#ffffff" />
+  <circle cx="980" cy="125" r="7" fill="#ffffff" />
+  <circle cx="1015" cy="160" r="5" fill="#ffffff" />
+  <circle cx="880" cy="170" r="5" fill="#ffffff" />
+</svg>

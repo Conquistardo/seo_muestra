@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export const prerender = true;
+
+const title = "Thanks for Contacting Us | Wisconsin Steel Structures";
+const description =
+  "Your request was received. Our team will contact you soon with details about your Wisconsin steel building project.";
+const canonical = "https://yourdomain.com/contact/thanks/";
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} noindex={true}>
+  <main id="main-content">
+    <section class="thanks">
+      <div class="container">
+        <h1>Thank You</h1>
+        <p>
+          We received your request and our team will reply soon with next steps for your metal building project in Wisconsin.
+        </p>
+        <a href="/metal-buildings-wisconsin/">Return to Wisconsin landing page</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .container {
+    width: min(760px, 92%);
+    margin: 0 auto;
+  }
+
+  .thanks {
+    padding: 4rem 0;
+  }
+
+  h1 {
+    margin: 0 0 0.9rem;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+  }
+</style>
