@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Commercial steel building service</title>
+  <desc id="desc">Illustration of a commercial steel building with storefront entry and loading bays.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg3)"/>
+  <rect y="585" width="1200" height="215" fill="#e2e8f0"/>
+  <rect x="170" y="250" width="860" height="350" rx="12" fill="#f8fafc" stroke="#0f172a" stroke-width="8"/>
+  <rect x="220" y="300" width="220" height="140" rx="8" fill="#bfdbfe"/>
+  <rect x="470" y="300" width="220" height="140" rx="8" fill="#bfdbfe"/>
+  <rect x="720" y="300" width="260" height="140" rx="8" fill="#bfdbfe"/>
+  <rect x="240" y="460" width="220" height="140" rx="8" fill="#1e293b"/>
+  <rect x="490" y="460" width="220" height="140" rx="8" fill="#1e293b"/>
+  <rect x="760" y="460" width="220" height="140" rx="8" fill="#1e293b"/>
+  <rect x="540" y="190" width="120" height="36" rx="6" fill="#e2e8f0"/>
+</svg>

@@ -1,0 +1,281 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+export const prerender = true;
+
+const title = "About Us | Wisconsin Steel Structures";
+const description =
+  "Learn about Wisconsin Steel Structures, our engineering-first approach, and how we deliver durable metal building solutions across Wisconsin.";
+const canonical = "https://yourdomain.com/about/";
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage="/images/about-wisconsin-steel.svg">
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <a class="back-link" href="/metal-buildings-wisconsin/" aria-label="Back to Metal Buildings Wisconsin page">
+            Back to Metal Buildings Wisconsin
+          </a>
+          <p class="eyebrow">Wisconsin Steel Structures</p>
+          <h1>About Us</h1>
+          <p>
+            We are a Wisconsin-focused steel building team helping homeowners, farm operators, and business owners build durable
+            structures with confidence. Our work combines practical project planning, load-compliant engineering, and transparent
+            communication from first quote to final walkthrough.
+          </p>
+          <p>
+            If you are comparing contractors, our difference is simple: we prioritize performance and long-term value, not fast sales.
+            Every recommendation is tied to your site conditions, use case, and budget priorities.
+          </p>
+          <a class="button" href="/contact/" aria-label="Request a quote from Wisconsin Steel Structures">
+            Talk to Our Team
+          </a>
+        </div>
+        <figure>
+          <img
+            src="/images/about-wisconsin-steel.svg"
+            alt="Team illustration representing steel building planning and installation in Wisconsin"
+            width="1200"
+            height="800"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to make steel construction straightforward and dependable for clients across Wisconsin. We guide projects from
+          concept to completion with clear expectations, engineered specifications, and support that remains practical at every stage.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>What We Stand For</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Engineering First</h3>
+            <p>
+              We design for local weather realities, including snow loads and structural requirements that matter in Wisconsin. This helps
+              avoid permit friction and costly rework.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Clear Communication</h3>
+            <p>
+              You get straightforward answers, realistic timelines, and updates you can act on. No confusing handoffs and no hidden
+              process steps.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Built for Use</h3>
+            <p>
+              We focus on function as much as structure. Door placement, interior clearance, and access planning are aligned to real
+              daily operations.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Long-Term Value</h3>
+            <p>
+              Our recommendations prioritize durability, maintainability, and smart upgrade paths so your building continues performing as
+              needs evolve.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Who We Serve</h2>
+        <ul>
+          <li>Homeowners needing metal garages, storage buildings, or personal workshops.</li>
+          <li>Farm and ranch operators requiring barns, equipment shelters, and agricultural structures.</li>
+          <li>Commercial clients building service shops, storage facilities, and operational spaces.</li>
+          <li>Property developers planning scalable steel structures for long-term use.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>How We Work</h2>
+        <ol>
+          <li><strong>Consultation:</strong> We map your goals, dimensions, and site constraints.</li>
+          <li><strong>Planning:</strong> We define building specs, options, and engineering scope.</li>
+          <li><strong>Coordination:</strong> We support permit and installation scheduling workflows.</li>
+          <li><strong>Delivery:</strong> We complete the project with quality checks and final review.</li>
+        </ol>
+        <p>
+          Interested in technical details? Explore our <a href="/services/">services</a> or go directly to our <a href="/contact/">contact page</a> for
+          a custom quote.
+        </p>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container">
+        <h2>Let&apos;s Build the Right Structure for Your Property</h2>
+        <p>
+          Share your project goals and our team will prepare a practical recommendation with clear pricing options.
+        </p>
+        <a class="button button-light" href="/contact/" aria-label="Go to contact form">
+          Request a Free Quote
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .container {
+    width: min(1080px, 92%);
+    margin: 0 auto;
+  }
+
+  .hero {
+    padding: 3.4rem 0 2.5rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: 1.4rem;
+    align-items: center;
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: #166534;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.78rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .back-link:hover,
+  .back-link:focus-visible {
+    text-decoration: underline;
+  }
+
+  h1 {
+    margin: 0.45rem 0 1rem;
+    font-size: clamp(1.95rem, 5vw, 2.8rem);
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: clamp(1.45rem, 3.5vw, 2rem);
+    margin: 0 0 1rem;
+    line-height: 1.25;
+  }
+
+  h3 {
+    margin: 0 0 0.6rem;
+    font-size: 1.15rem;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 0 0 1rem;
+    color: #1e293b;
+  }
+
+  .section {
+    padding: 2.4rem 0;
+  }
+
+  .section-alt {
+    background: #f1f5f9;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  figure {
+    margin: 0;
+    background: #fff;
+    border: 1px solid #dbe2ea;
+    border-radius: 14px;
+    padding: 0.85rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+  }
+
+  .button {
+    display: inline-block;
+    background: #166534;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+  }
+
+  .button:hover,
+  .button:focus-visible {
+    background: #14532d;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+  }
+
+  ul,
+  ol {
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 0.65rem;
+  }
+
+  .cta {
+    text-align: center;
+    background: linear-gradient(135deg, #0f766e 0%, #0f766e 12%, #14532d 100%);
+    color: #fff;
+  }
+
+  .cta p {
+    color: #e2e8f0;
+    margin: 0 auto 1rem;
+    max-width: 760px;
+  }
+
+  .button-light {
+    background: #f8fafc;
+    color: #14532d;
+  }
+
+  @media (min-width: 780px) {
+    .hero-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+    }
+
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

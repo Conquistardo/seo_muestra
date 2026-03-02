@@ -8,11 +8,7 @@ const title = "Contact Us | Wisconsin Steel Structures";
 const description =
   "Contact Wisconsin Steel Structures to request a quote for metal garages, barns, and commercial steel buildings in Wisconsin.";
 const canonical = `${siteUrl}/contact/`;
-
-const destinationEmail = import.meta.env.PUBLIC_CONTACT_EMAIL ?? "hello@yourdomain.com";
-const siteOrigin = (import.meta.env.PUBLIC_SITE_URL ?? "http://localhost:4321").replace(/\/$/, "");
-const formAction = `https://formsubmit.co/${encodeURIComponent(destinationEmail)}`;
-const successUrl = `${siteOrigin}/contact/thanks/`;
+const formAction = "/api/contact";
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical}>
@@ -28,10 +24,10 @@ const successUrl = `${siteOrigin}/contact/thanks/`;
           <strong> metal buildings in Wisconsin</strong> for residential, agricultural, and commercial use.
         </p>
         <form action={formAction} method="POST" class="contact-form" aria-label="Quote request form">
-          <input type="hidden" name="_subject" value="New Wisconsin steel building lead" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value={successUrl} />
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
 
           <div class="field">
             <label for="fullName">Full Name</label>
@@ -138,6 +134,13 @@ const successUrl = `${siteOrigin}/contact/thanks/`;
   .field {
     display: grid;
     gap: 0.35rem;
+  }
+
+  .hp-field {
+    position: absolute;
+    left: -10000px;
+    opacity: 0;
+    pointer-events: none;
   }
 
   label {

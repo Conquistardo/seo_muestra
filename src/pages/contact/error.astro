@@ -3,24 +3,24 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export const prerender = true;
 
-const title = "Thanks for Contacting Us | Wisconsin Steel Structures";
+const title = "Contact Request Error | Wisconsin Steel Structures";
 const description =
-  "Your request was received. Our team will contact you soon with details about your Wisconsin steel building project.";
-const canonical = "https://yourdomain.com/contact/thanks/";
+  "There was a problem sending your request. Please go back to the contact form and try again.";
+const canonical = "https://yourdomain.com/contact/error/";
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} noindex={true}>
   <main id="main-content">
-    <section class="thanks">
+    <section class="error-state">
       <div class="container">
         <a class="back-link" href="/metal-buildings-wisconsin/" aria-label="Back to Metal Buildings Wisconsin page">
           Back to Metal Buildings Wisconsin
         </a>
-        <h1>Thank You</h1>
+        <h1>We Couldn&apos;t Send Your Request</h1>
         <p>
-          We received your request and our team will reply soon with next steps for your metal building project in Wisconsin.
+          Please return to the contact form and verify your information. If the issue continues, try again in a few minutes.
         </p>
-        <a href="/metal-buildings-wisconsin/">Return to Wisconsin landing page</a>
+        <a href="/contact/">Back to Contact Form</a>
       </div>
     </section>
   </main>
@@ -32,7 +32,7 @@ const canonical = "https://yourdomain.com/contact/thanks/";
     margin: 0 auto;
   }
 
-  .thanks {
+  .error-state {
     padding: 4rem 0;
   }
 

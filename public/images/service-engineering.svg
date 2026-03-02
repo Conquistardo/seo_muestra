@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Engineering and installation service</title>
+  <desc id="desc">Illustration of engineering drawings and steel frame installation.</desc>
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg4)"/>
+  <rect x="120" y="140" width="530" height="500" rx="16" fill="#ffffff" stroke="#1e293b" stroke-width="8"/>
+  <line x1="180" y1="230" x2="590" y2="230" stroke="#94a3b8" stroke-width="6"/>
+  <line x1="180" y1="300" x2="590" y2="300" stroke="#94a3b8" stroke-width="6"/>
+  <line x1="180" y1="370" x2="590" y2="370" stroke="#94a3b8" stroke-width="6"/>
+  <line x1="180" y1="440" x2="590" y2="440" stroke="#94a3b8" stroke-width="6"/>
+  <polygon points="760,545 980,545 920,250 700,250" fill="#e2e8f0" stroke="#14532d" stroke-width="8"/>
+  <line x1="730" y1="250" x2="950" y2="250" stroke="#14532d" stroke-width="8"/>
+  <line x1="700" y1="545" x2="980" y2="545" stroke="#14532d" stroke-width="8"/>
+  <line x1="820" y1="545" x2="760" y2="250" stroke="#14532d" stroke-width="8"/>
+  <line x1="890" y1="545" x2="830" y2="250" stroke="#14532d" stroke-width="8"/>
+  <circle cx="980" cy="620" r="56" fill="#166534"/>
+  <rect x="948" y="600" width="64" height="16" rx="6" fill="#f8fafc"/>
+</svg>

@@ -1,0 +1,312 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+export const prerender = true;
+
+const seo = {
+  title: "Steel Building Services in Wisconsin | Garages, Barns, Commercial",
+  description:
+    "Explore our Wisconsin steel building services: custom metal garages, agricultural structures, and commercial steel buildings with engineered plans and installation support.",
+  canonical: "https://yourdomain.com/services/",
+  ogImage: "/images/service-commercial.svg"
+};
+
+const hero = {
+  eyebrow: "Wisconsin Steel Structures",
+  title: "Services",
+  intro:
+    "We provide complete steel building solutions for homeowners, farmers, and commercial operators across Wisconsin. Every service includes practical planning, load-compliant engineering, and clear communication so your project stays on schedule and aligned with budget expectations.",
+  ctaLabel: "Request a Free Quote",
+  ctaHref: "/contact/",
+  image: {
+    src: "/images/service-commercial.svg",
+    alt: "Overview of steel building services in Wisconsin"
+  }
+};
+
+const servicesEntries = (await getCollection("services")).sort((a, b) => a.data.order - b.data.order);
+const services = await Promise.all(
+  servicesEntries.map(async (entry) => {
+    const { Content } = await entry.render();
+    return {
+      ...entry.data,
+      Content
+    };
+  })
+);
+
+const addons = {
+  title: "Popular Add-Ons and Upgrades",
+  intro: "Many clients start with a base structure and add performance upgrades that improve comfort, workflow, and long-term value.",
+  items: [
+    "Insulation packages for temperature control and reduced condensation.",
+    "Framed openings for office doors, storefronts, and utility access.",
+    "Roll-up and walk-in door combinations sized to your equipment.",
+    "Skylights, ridge vents, and side ventilation for airflow.",
+    "Color options and trim packages aligned with your brand or home exterior."
+  ]
+};
+
+const process = {
+  title: "How We Deliver Projects",
+  steps: [
+    { label: "Scope and quote", description: "We collect dimensions, use-case needs, and site details." },
+    { label: "Engineering", description: "Designs are aligned with Wisconsin weather and permit requirements." },
+    { label: "Scheduling", description: "We coordinate materials, prep milestones, and install timing." },
+    { label: "Build completion", description: "We finish with quality checks and a final walkthrough." }
+  ]
+};
+
+const cta = {
+  title: "Need a Custom Steel Building Plan?",
+  text: "Tell us what you need and we will send a tailored recommendation with pricing options for your Wisconsin project.",
+  buttonLabel: "Contact Us",
+  buttonHref: "/contact/"
+};
+---
+
+<BaseLayout title={seo.title} description={seo.description} canonical={seo.canonical} ogImage={seo.ogImage}>
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <a class="back-link" href="/metal-buildings-wisconsin/" aria-label="Back to Metal Buildings Wisconsin page">
+            Back to Metal Buildings Wisconsin
+          </a>
+          <p class="eyebrow">{hero.eyebrow}</p>
+          <h1>{hero.title}</h1>
+          <p>{hero.intro}</p>
+          <a class="button" href={hero.ctaHref} aria-label="Request a free quote for steel building services">
+            {hero.ctaLabel}
+          </a>
+        </div>
+        <figure>
+          <img src={hero.image.src} alt={hero.image.alt} width="1200" height="800" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Why Wisconsin Clients Work With Us</h2>
+        <p>
+          Our team works across residential, agricultural, and commercial projects where durability and long-term performance matter. We
+          do not push generic packages; we shape each recommendation around property use, weather conditions, and operational workflow.
+        </p>
+        <p>
+          From early planning to final completion, we focus on predictable delivery and practical guidance. If you need a partner that
+          understands Wisconsin steel construction requirements and real-world timelines, our services are built for that result.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Our Core Services</h2>
+        <div class="services-grid">
+          {services.map((service) => (
+            <article class="service-card">
+              <img src={service.image} alt={service.alt} width="1200" height="800" loading="lazy" decoding="async" />
+              <h3>{service.name}</h3>
+              <div class="service-copy">
+                <service.Content />
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>{addons.title}</h2>
+        <p>{addons.intro}</p>
+        <ul>
+          {addons.items.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>{process.title}</h2>
+        <ol>
+          {process.steps.map((step) => (
+            <li>
+              <strong>{step.label}:</strong> {step.description}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container">
+        <h2>{cta.title}</h2>
+        <p>{cta.text}</p>
+        <a class="button button-light" href={cta.buttonHref} aria-label="Go to contact form">
+          {cta.buttonLabel}
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .container {
+    width: min(1080px, 92%);
+    margin: 0 auto;
+  }
+
+  .hero {
+    padding: 3.4rem 0 2.5rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: 1.4rem;
+    align-items: center;
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: #166534;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.78rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .back-link:hover,
+  .back-link:focus-visible {
+    text-decoration: underline;
+  }
+
+  h1 {
+    margin: 0.45rem 0 1rem;
+    font-size: clamp(1.95rem, 5vw, 2.8rem);
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: clamp(1.45rem, 3.5vw, 2rem);
+    margin: 0 0 1rem;
+    line-height: 1.25;
+  }
+
+  h3 {
+    margin: 0.85rem 0 0.6rem;
+    font-size: 1.15rem;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 0 0 1rem;
+    color: #1e293b;
+  }
+
+  .section {
+    padding: 2.4rem 0;
+  }
+
+  .section-alt {
+    background: #f1f5f9;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  figure {
+    margin: 0;
+    background: #fff;
+    border: 1px solid #dbe2ea;
+    border-radius: 14px;
+    padding: 0.85rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+  }
+
+  .button {
+    display: inline-block;
+    background: #166534;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+  }
+
+  .button:hover,
+  .button:focus-visible {
+    background: #14532d;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-card {
+    background: #fff;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+  }
+
+  .service-card img {
+    border-radius: 10px;
+    border: 1px solid #dbe2ea;
+    background: #f8fafc;
+  }
+
+  .service-copy :global(p) {
+    margin: 0 0 0.8rem;
+    color: #1e293b;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 0.65rem;
+  }
+
+  .cta {
+    text-align: center;
+    background: linear-gradient(135deg, #0f766e 0%, #0f766e 12%, #14532d 100%);
+    color: #fff;
+  }
+
+  .cta p {
+    color: #e2e8f0;
+    margin: 0 auto 1rem;
+    max-width: 760px;
+  }
+
+  .button-light {
+    background: #f8fafc;
+    color: #14532d;
+  }
+
+  @media (min-width: 780px) {
+    .hero-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

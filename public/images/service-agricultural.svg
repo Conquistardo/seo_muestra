@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Agricultural steel building service</title>
+  <desc id="desc">Illustration of a steel agricultural barn and silo on a farm landscape.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d1fae5"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg2)"/>
+  <rect y="560" width="1200" height="240" fill="#bbf7d0"/>
+  <rect x="250" y="305" width="720" height="290" rx="12" fill="#f1f5f9" stroke="#14532d" stroke-width="8"/>
+  <polygon points="220,330 610,180 1000,330" fill="#86efac" stroke="#14532d" stroke-width="8"/>
+  <rect x="320" y="375" width="210" height="220" rx="8" fill="#1e293b"/>
+  <rect x="560" y="375" width="160" height="220" rx="8" fill="#1e293b"/>
+  <rect x="750" y="375" width="160" height="220" rx="8" fill="#1e293b"/>
+  <rect x="1010" y="260" width="80" height="335" rx="10" fill="#94a3b8" stroke="#14532d" stroke-width="8"/>
+  <ellipse cx="1050" cy="250" rx="50" ry="24" fill="#cbd5e1" stroke="#14532d" stroke-width="8"/>
+</svg>
